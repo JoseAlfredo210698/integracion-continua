@@ -15,6 +15,14 @@ module.exports = function (config) {
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
+    browsers: ['Chrome'],
+    customLaunchers: {
+      ChromeHeadlessCI:{
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox', '--disable-gpu']
+      }
+    } ,
+
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, '../coverage/integracionContinua'),
       reports: ['html', 'lcovonly', 'text-summary'],
