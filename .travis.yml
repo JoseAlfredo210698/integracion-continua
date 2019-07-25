@@ -9,7 +9,7 @@ before_script:
 script:
   - npm install
   # - npm test  
-  - npm test --watch=false --progress=false --browsers=ChromeHeadlessCI
+  - ng test --watch=false --progress=false --browsers=ChromeHeadlessCI
   - npm run build
 deploy:
   skip_cleanup: true
