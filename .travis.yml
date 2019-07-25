@@ -8,7 +8,8 @@ before_script:
   - npm install -g @angular/cli
 script:
   - npm install
-  - ng test --watch=false --progress=false --browser=ChromeHeadLessCI
+  - npm test
+  # - ng test --watch=false --progress=false --browser=ChromeHeadLessCI
   - npm run build
 deploy:
   skip_cleanup: true
